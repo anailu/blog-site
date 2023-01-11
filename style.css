@@ -122,17 +122,118 @@ body {
   text-align: center;
   padding: 0;
 }
-  
+
 .main_container {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 1170px;
+}
+  
+.trends_section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h2 {
+  font-family: OpenSans, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.title_trends {
+  margin: 58px auto 28px auto;
+  /* vertical-align: middle; */
+}
+
+.title_trends::after, .title_products::after {
+  content: '';
+  display: block;
+  background-color: #b59f5b;
+  width: 66px;
+  height: 3px;
+  margin: 10px auto 0 auto;
+}
+
+.trends_container {
+  min-width: 1200px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.trends_post_container {
+  /* width: 410px; */
+  position: relative;
+  color: white;
+  flex: 1 1 25%;
+  min-height: 320px;
+  padding: 0.8rem;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #606260;
+}
+
+.trends_post_container:after {
+  content: "";
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.trend1 {
+  background-image: url(../images/trend1.jpg);
+  margin-right: 4px;
+  /* position: relative; */
+}
+  
+.trend2 {
+  background-image: url(../images/trend2.jpg);
+  margin-right: 4px;
+}
+
+.trend3 {
+  background-image: url(../images/trend3.jpg);
+  margin-right: 4px;
+}
+
+.trend4 {
+  background-image: url(../images/trend4.jpg);
+}
+
+.trends_content {
+  border: 4px solid #b59f5b;
+  padding: 1.6rem 1.65rem 1.6rem 1.65rem;
+  margin: auto;
+}
+
+.trends_header {
+  margin: 10px 0 0 0;
+}
+
+.trends_header:hover {
+  color: #b59f5b;
+  cursor: pointer;
+}
+
+.main_center, .products {
+  margin: 64px auto 64px auto;
   display: flex;
   flex-wrap: nowrap;
   width: 1170px;
-  margin: 64px auto 0 auto;
+
   padding: 0 15px 0 15px;
   justify-content: space-between;
-  margin-bottom: 64px;
+  /* margin-bottom: 64px; */
 }
-  
+
 .posts_feed {
   width: 778px;
   min-height: 1412;
@@ -177,22 +278,25 @@ body {
   font-size: 14px;
 }
   
+a {
+  text-decoration: none;
+}
+
 .tag_link {
   margin-right: 20px;
-  text-decoration: none;
   color: #b59f5b;
 }
   
 .tag_link:hover {
   text-decoration: underline;
 }
-  
+
 .post_card_header {
-  font-family: OpenSans, sans-serif;
+  /* font-family: OpenSans, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 20px; 
+  line-height: 24px; */
   margin-top: 7px;
   margin-bottom: 25px;
   cursor: pointer;
@@ -446,6 +550,7 @@ body {
   min-height: 322px;
   margin-top: 60px;
 }
+
 .topics_list {
   list-style: none;
   padding: 0;
@@ -479,6 +584,116 @@ body {
   font-weight: bold;
   font-size: 12px;
   color: #b59f5b;
+}
+
+.products_section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title_products {
+  margin: 0 auto 28px auto;
+  min-width: 1200px;
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 0;
+  justify-content: space-around;
+}
+
+.product_container {
+  flex: 1 1 33.33%;
+  align-content: stretch;
+}
+
+.product_container:nth-child(3n+2) {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.product_imgbox {
+  display: flex;
+}
+
+.picture {
+  margin: auto;
+}
+
+.product_content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  padding-top: 0;
+
+  border: 3px solid #b59f5b;
+}
+
+/* .product_body {
+  margin: auto;
+} */
+
+.product_header {
+  margin-top: 25px;
+  margin-bottom: 8px;
+}
+
+.product_text {
+  font-family: OpenSans, sans-serif;
+  font-weight: normal;
+  color: #000000;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0;
+}
+
+.links_products {
+  color: #b59f5b;
+}
+
+.product_footer {
+  margin-top: 23.5px;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+}
+
+/* .product_prices {
+  /* display: flex;
+  flex-wrap: wrap; */
+
+.product_price {
+  display: flex;
+  
+  font-family: OpenSans, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.product_price_old {
+  text-decoration: line-through;
+  font-size: 14px;
+  line-height: 0.5;
+
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.product_button {
+  border: none;
+  background-color: #b59f5b;
+  padding: 19px 29px;
+
+
+  font-family: OpenSans, sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .footer_container {
