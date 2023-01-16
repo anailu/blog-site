@@ -99,6 +99,7 @@
             <h2 class="trends_header">Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?</h2>
           </div>
         </article>
+
       </div>
     </section>
 
@@ -421,6 +422,31 @@
             </div>
           </div>
         </article>
+
+        <!-- <article class="product_container product3">
+          <div class="product_imgbox">
+            <img src="images/shop-item-desk3.jpg" 
+                 srcset="images/shop-item-desk3.jpg"
+                class="picture" alt="Шестиугольная рамка">
+          </div>
+
+          <div class="product_content">
+            <div class="product_body">
+              <h2 class="product_header">Шестиугольная рамка</h2>
+              <p class="product_text">Необычная рамка для украшения дома из видео <a href="#" class="links_products video_instruction">«Как сделать рамку из подручных средств за 30 минут»</a></p>
+            </div>
+
+            <div class="product_footer">
+              <div class="product_prices">
+                <span class="product_price product_price_old">500 ₽</span>
+                <span class="product_price">400 ₽</span>
+              </div>
+              <button class="product_button" type="button">В магазин</button>
+            </div>
+          </div>
+        </article> -->
+
+
       </div>
     </section>
   </div>
@@ -451,4 +477,58 @@
     </div>
     
   </footer>
+
+  <div class="popup hidden">
+    <div class="popup_container">
+      <div class="signup">
+        <h2 class="popup_title">Ваш фидбек</h2>
+        
+        <div class="signup_content">
+          <form class="signup_form">
+            <div class="signup_question1">
+              <label for="period" class="signup_q1_header">Как часто вы заходите на сайт?</label>
+              <select class="signup_period" id="period">
+                <option class="sign-up__label" value="Каждый день">Каждый день</option>
+                <option class="sign-up__label" selected value="Почти каждый день">Почти каждый день</option>
+                <option class="sign-up__label" value="Раз в несколько дней">Раз в несколько дней</option>
+                <option class="sign-up__label" value="Раз в несколько недель">Раз в несколько недель</option>
+                <option class="sign-up__label" value="Несколько раз в год">Несколько раз в год</option>
+              </select>
+            </div>
+
+            <div class="signup_question2">
+              <div class="signup_radio">
+                <p class="signup_q2_header">Вы подписаны на e-mail рассылку?</p>
+                <label class="signup_radio_group">
+                  <input class="contactChoice_input" type="radio" name="choice" value="yes" checked>
+                  <span class="contactChoice">Да</span>
+                </label>
+                <label class="signup_radio_group">
+                  <input class="contactChoice_input" type="radio" name="choice" value="no">
+                  <span class="contactChoice">Нет</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="signup_question3">
+              <div class="signup_comment">
+                <label for="comment" class="signup_q3_header">Расскажите, какой контент вы хотели бы видеть
+                  на нашем сайте?</label>
+                <textarea class="signup_textarea" name="comment" placeholder="Может, больше рецептов?" id="comment"></textarea>
+              </div>
+            </div>
+            
+            <div class="signup_button_container">
+              <button type="submit" class="signup_send">
+                <span class="signup_send__text">Отправить</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <label class="popup_close" type="button"></label>
+    </div>
+  </div>
+
 </body>
