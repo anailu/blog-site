@@ -2,7 +2,8 @@
 <html lang="ru">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog</title>
     <link rel="stylesheet" href="../diploma2/css/style.css" type="text/css">
 </head>
@@ -11,10 +12,13 @@
   <header class="welcome" id="main">
     <div class="header_container">
       <div class="header">
-        <a href="https://noemi.ru">
+        <a class="header-logo_desktop" href="https://noemi.ru">
           <img class="header-logo" src="../diploma2/svg/noemi-logo.svg" alt="Логотип компании">
         </a>
         <nav class="menu">
+          <button class="menu-button">
+            <span class="menu-button-lable">Открыть меню</span>
+          </button>
           <ul class="menu-list">
             <li class="menu-item">
               <a class="menu-link" href="#main">Главная</a>
@@ -37,6 +41,9 @@
           </ul>
         </nav>
       </div>
+      <a class="header-logo_mobile" href="https://noemi.ru">
+        <img class="header-logo logo_mobile" src="../diploma2/svg/noemi-logo.svg" alt="Логотип компании">
+      </a>
       <h1 class="welcome-title">Блог о творчестве, спорте, и образе жизни</h1>   
     </div>
   </header>
@@ -47,7 +54,7 @@
       <h2 class="title_trends">Сейчас в тренде</h2>
 
       <div class="trends_container">
-        <article class="trends_post_container trend1">
+        <article class="trends_post_container trend_windowsill-garden">
           <div class="trends_content">
             <ul class="post_card_tags tags_trends">
               <li class="post_card_tag">
@@ -61,7 +68,7 @@
           </div>
         </article>
 
-        <article class="trends_post_container trend2">
+        <article class="trends_post_container trend_cheeses">
           <div class="trends_content">
             <ul class="post_card_tags">
               <li class="post_card_tag">
@@ -72,7 +79,7 @@
         </div>
         </article>
 
-        <article class="trends_post_container trend3">
+        <article class="trends_post_container trend_hiking">
           <div class="trends_content">
             <ul class="post_card_tags">
               <li class="post_card_tag">
@@ -86,7 +93,7 @@
         </div>
         </article>
 
-        <article class="trends_post_container trend4">
+        <article class="trends_post_container trend_lemons">
           <div class="trends_content">
             <ul class="post_card_tags">
               <li class="post_card_tag">
@@ -105,10 +112,11 @@
 
     <div class="main_center">
       <main class="posts_feed" id="articles">
-          <article class="post_card post1_container">
+          <article class="post_card">
             <div class="post_card_image">
-                <img src="images/last-post1.jpg" alt="Человек, идущий вдаль к морю" 
-                width="381px">
+                <img src="images/last-post1.jpg" 
+                alt="Человек, идущий вдаль к морю"
+                width="100%">
             </div>
             <div class="content_post">
               <ul class="post_card_tags">
@@ -128,11 +136,13 @@
             </div>
           </article>
         
-          <article class="post_card post2_container">
+          <article class="post_card">
             <div class="post_card_image">
-                <img src="images/last-post2.jpg" alt="Девушка, занимающаяся йогой" 
-                width="381px">
+                <img src="images/last-post2.jpg" 
+                alt="Девушка, занимающаяся йогой"
+                width="100%">
             </div>
+
             <div class="content_post">
               <ul class="post_card_tags">
                 <li class="post_card_tag">
@@ -151,11 +161,13 @@
             </div>
           </article>
         
-          <article class="post_card post3_container">
+          <article class="post_card">
               <div class="post_card_image">
-                <img src="images/last-post3.jpg" alt="Танцующая девушка в толпе на улице" 
-                width="381px">
+                <img src="images/last-post3.jpg" 
+                alt="Танцующая девушка в толпе на улице"
+                width="100%">
               </div>
+
               <div class="content_post">
                 <ul class="post_card_tags">
                   <li class="post_card_tag">
@@ -174,11 +186,13 @@
               </div>
           </article>
         
-          <article class="post_card post4_container">
+          <article class="post_card">
               <div class="post_card_image">
-                <img src="images/last-post4.jpg" alt="Стол с едой" 
-                width="381px">
+                <img src="images/last-post4.jpg" 
+                alt="Стол с едой"
+                width="100%">
               </div>
+
               <div class="content_post">
                 <ul class="post_card_tags">
                   <li class="post_card_tag">
@@ -197,10 +211,11 @@
               </div>
           </article>
         
-          <article class="post_card post5_container">
+          <article class="post_card">
               <div class="post_card_image">
-                <img src="images/last-post5.jpg" alt="Подушка с принтом" 
-                width="381px">
+                <img src="images/last-post5.jpg" 
+                alt="Подушка с принтом" 
+                width="100%">
               </div>
               <div class="content_post">
                 <ul class="post_card_tags">
@@ -355,11 +370,11 @@
       <h2 class="title_products">Наши изделия</h2>
 
       <div class="products">
-        <article class="product_container product1">
+        <article class="product_container product_pillows">
           <div class="product_imgbox">
             <img src="images/shop-item-desk1.jpg" 
                   srcset="images/shop-item-desk1.jpg"
-                  class="picture" alt="подушка">
+                  class="product_picture" alt="подушка">
           </div>
 
           <div class="product_content">
@@ -378,11 +393,11 @@
           </div>
         </article>
 
-        <article class="product_container product2">
+        <article class="product_container product_rabbit">
           <div class="product_imgbox">
             <img  src="images/shop-item-desk2.jpg" 
                   srcset="images/shop-item-desk2.jpg"
-                  class="picture" alt="кукла «Зайчик»">
+                  class="product_picture" alt="кукла «Зайчик»">
           </div>
 
           <div class="product_content">
@@ -400,11 +415,11 @@
           </div>
         </article>
 
-        <article class="product_container product3">
+        <article class="product_container product_frame">
           <div class="product_imgbox">
             <img src="images/shop-item-desk3.jpg" 
                  srcset="images/shop-item-desk3.jpg"
-                class="picture" alt="Шестиугольная рамка">
+                class="product_picture" alt="Шестиугольная рамка">
           </div>
 
           <div class="product_content">
@@ -422,30 +437,6 @@
             </div>
           </div>
         </article>
-
-        <!-- <article class="product_container product3">
-          <div class="product_imgbox">
-            <img src="images/shop-item-desk3.jpg" 
-                 srcset="images/shop-item-desk3.jpg"
-                class="picture" alt="Шестиугольная рамка">
-          </div>
-
-          <div class="product_content">
-            <div class="product_body">
-              <h2 class="product_header">Шестиугольная рамка</h2>
-              <p class="product_text">Необычная рамка для украшения дома из видео <a href="#" class="links_products video_instruction">«Как сделать рамку из подручных средств за 30 минут»</a></p>
-            </div>
-
-            <div class="product_footer">
-              <div class="product_prices">
-                <span class="product_price product_price_old">500 ₽</span>
-                <span class="product_price">400 ₽</span>
-              </div>
-              <button class="product_button" type="button">В магазин</button>
-            </div>
-          </div>
-        </article> -->
-
 
       </div>
     </section>
