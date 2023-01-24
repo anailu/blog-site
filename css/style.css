@@ -19,7 +19,8 @@
 body {
   margin: 0;
   padding: 0;
-  min-width: 1200px;
+  width: 100%;
+  /* min-width: 1200px; */
   font-family: OpenSans, sans-serif;
   font-weight: normal;
 }
@@ -68,6 +69,10 @@ body {
   display: flex;
   width: 180px;
 }
+
+.header-logo_mobile {
+  display: none;
+}
     
 .menu {
   display: flex;
@@ -78,8 +83,51 @@ body {
   text-transform: uppercase;
   font-size: 13px;
   float: left;
+  /* flex-direction: row-reverse;
+  align-items: center; */
 }
-    
+
+.menu-button {
+  width: 1.4em;
+  height: 1em;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  font-size: 25px;
+  position: relative;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+.menu-button:before, .menu-button:after {
+  content: "";
+  width: 100%;
+  height: 20%;
+  border-radius: 5px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+}
+
+.menu-button:before {
+  top: 0;
+}
+
+.menu-button:after {
+  bottom: 0;
+}
+
+.menu-button-lable {
+  width: 100%;
+  height: 20%;
+  margin-top: -0.1em;
+  border-radius: 5px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
 .menu-list {
   list-style-type: none;
   display: flex;
@@ -126,8 +174,7 @@ body {
 .main_container {
   display: flex;
   flex-wrap: wrap;
-  min-width: 1170px;
-  max-width: 2300px;
+  width: 100%;
   margin: 0 auto;
 }
   
@@ -159,7 +206,7 @@ h2 {
 }
 
 .trends_container {
-  min-width: 1200px;
+  /* min-width: 1200px; */
   display: flex;
   flex-wrap: nowrap;
   position: relative;
@@ -198,19 +245,19 @@ h2 {
   margin-right: 0;
 }
 
-.trend1 {
+.trend_windowsill-garden {
   background-image: url(../images/trend1.jpg);
 }
   
-.trend2 {
+.trend_cheeses {
   background-image: url(../images/trend2.jpg);
 }
 
-.trend3 {
+.trend_hiking {
   background-image: url(../images/trend3.jpg);
 }
 
-.trend4 {
+.trend_lemons {
   background-image: url(../images/trend4.jpg);
 }
 
@@ -228,15 +275,15 @@ h2 {
   cursor: pointer;
 }
 
-.main_center, .products {
+.main_center, .products_section {
   margin: 64px auto 64px auto;
   display: flex;
   flex-wrap: nowrap;
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%;
 
   padding: 0 15px 0 15px;
   justify-content: space-between;
-  /* margin-bottom: 64px; */
 }
 
 .posts_feed {
@@ -248,7 +295,7 @@ h2 {
   
 .post_card {
   display: flex;
-  min-width: 635px;
+  /* min-width: 635px; */
   flex-direction: row;
   margin-bottom: 59px;
 }
@@ -257,6 +304,7 @@ h2 {
   display: flex;
   position: relative;
   min-height: 295px;
+  /* width: 100%; */
 }
   
 .content_post {
@@ -413,7 +461,7 @@ a {
 
 .search {
   display: flex;
-  width: 270px;
+  width: 100%;
   height: 47px;
   margin: 60px 0 62px 0;
 }
@@ -458,7 +506,7 @@ a {
   margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
-  width: 270px;
+  width: 100%;
   height: 164px;
   margin: 60px 0 62px 0;
 }
@@ -470,7 +518,7 @@ a {
 }
 
 .subscribe {
-  width: 270px;
+  width: 100%;
   height: 114px;
   margin-top: 41px;
 }
@@ -478,7 +526,7 @@ a {
 .email_container {
   display: flex;
   box-sizing: border-box;
-  width: 270px;
+  width: 100%;
   height: 48px;
   background-color: #f4f7f6;
   border: 0;
@@ -495,7 +543,7 @@ a {
 
 .subscribe_button {
   display: flex;
-  width: 270px;
+  width: 100%;
   height: 48px;
   background-color: #b59f5b;
   border: 0;
@@ -566,8 +614,7 @@ a {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-color: #eeeeee;
-  
-  width: 271px;
+  width: 100%;
 }
 
 .topic_item {
@@ -594,11 +641,13 @@ a {
 .products_section {
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
+  margin-bottom: 64px;
 }
 
 .title_products {
   margin: 0 auto 28px auto;
-  min-width: 1200px;
+  width: 100%;
   text-align: center;
 }
 
@@ -614,7 +663,7 @@ a {
   flex: 1 1 33.33%;
 }
 
-.product_container:nth-child(3n+2) {
+.product_container:nth-child(even) {
   margin-right: 5%;
   margin-left: 5%;
 }
@@ -622,8 +671,13 @@ a {
 .product_imgbox {
   display: flex;
   position: absolute;
-  bottom: 308px;
-  left: 7%;
+  /* bottom: 308px; */
+  left: 8%;
+  right: 8%;
+}
+
+.product_picture {
+  width: 100%;
 }
 
 .product_content {
@@ -631,7 +685,7 @@ a {
   padding: 20px;
   padding-top: 50px;
   min-height: 260px;
-  margin-top: 174px;
+  margin-top: 50%;
   border: 3px solid #b59f5b;
 }
 
@@ -662,10 +716,6 @@ a {
   align-items: flex-end;
 }
 
-/* .product_prices {
-  /* display: flex;
-  flex-wrap: wrap; */
-
 .product_price {
   display: flex;
   
@@ -688,7 +738,6 @@ a {
   background-color: #b59f5b;
   padding: 19px 29px;
 
-
   font-family: OpenSans, sans-serif;
   font-weight: bold;
   color: #ffffff;
@@ -700,7 +749,7 @@ a {
 .footer_container {
   display: flex;
   flex-wrap: wrap;
-  width: 1170px;
+  /* width: 1170px; */
   padding: 0 15px 0 15px;
   margin: auto;
   justify-content: center;
@@ -709,7 +758,8 @@ a {
 .social_container {
   display: flex;
   flex-wrap: nowrap;
-  min-width: 1170px;
+  width: 1170px;
+  /* width: 100%; */
   min-height: 83px;
   justify-content: center;
   background-color: #f4f7f6;
@@ -961,3 +1011,353 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@media (max-width: 1199px) {
+  .menu-list {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+
+  .welcome {
+    padding-top: 42px;
+    background-image: url(../images/banner-bg-tablet.jpg);
+  }
+
+  .header_container {
+    width: 100%;
+    padding: 0 35px 0 35px;
+  }
+  .welcome-title {
+    font-size: 40px;
+    width: 100%;
+  }
+  
+  .trends_container {
+    flex-wrap: wrap;
+  }
+
+  .trends_post_container {
+    flex: 1 1 40%;
+    margin-bottom: 4px;
+    margin-right: 0;
+  }
+
+  .trends_post_container:nth-child(odd) {
+    margin-right: 4px;
+  }
+
+  .trends_post_container:nth-last-child(1), .trends_post_container:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  .main_center {
+    margin: 50px 35px 55px 35px;
+    padding: 0;
+  }
+  
+  .posts_feed {
+    width: 56%;
+  }
+
+  .post_card {
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1 1 100%;
+    width: 100%;
+    margin-bottom: 41px;
+
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-color: #eeeeee;
+  }
+
+  .post_card_image {
+    width: 100%;
+  }
+
+  .content_post {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 17px;
+  }
+
+  .post_card_header {
+    margin-top: 14px;
+    margin-bottom: 30px;
+  }
+
+  .post_card_info {
+    margin-bottom: 33px;
+  }
+
+  .sidebar {
+    margin-left: 35px;
+  }
+
+  .products_section {
+    padding: 0 34px;
+  }
+
+  .products {
+    flex-wrap: wrap;
+  }
+
+  .product_container {
+    position: relative;
+    flex: 1 1 45%;
+  }
+
+  .product_container:nth-child(n+3) {
+    margin-right: auto;
+    top: 3%;
+  }
+
+  .product_container:nth-child(even){
+    margin-right: 0;
+    margin-left: 3%;
+  }
+
+  .footer_container {
+    padding: 0 34px;
+  }
+} 
+
+@media (max-width: 640px) {
+  .welcome {
+    height: 100vh;
+    padding: 30px 15px 0 15px;
+
+    background-image: url(../images/banner-mobile.jpg);
+  }
+
+  .header_container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .header-logo_desktop {
+    display: none;
+  }
+
+  .header-logo_mobile {
+    display: flex;
+    margin: auto;
+    margin-top: calc(1/3.65*100vh);
+  }
+
+  .logo_mobile {
+    margin: auto;
+    width: 100%;
+    height: 60px;
+  }
+
+  .menu {
+    margin-left: auto;
+    height: auto;
+  }
+
+  .menu-button {
+    width: 0.92em;
+    height: 0.8em;
+  }
+
+  .menu-button-lable, .menu-button::before, .menu-button::after {
+    height: 15%;
+  }
+
+  .menu-button::after {
+    bottom: 4%;
+  }
+
+  .welcome-title {
+    font-size: 26px;
+    line-height: 36px;
+    width: 100%;
+    margin-top: 42px;
+  }
+
+  .title_trends {
+    margin-top: 44px;
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .trends_container {
+    flex-wrap: wrap;
+  }
+
+  .trends_post_container {
+    flex: 1 1 100%;
+    margin-right: 0;
+    margin-bottom: 3px;
+    min-height: 232px;
+  }
+
+  .trends_content {
+    width: 100%;
+  }
+
+  .products {
+    flex-wrap: wrap;
+  }
+
+  .product_container {
+   flex: 1 1 100%;
+  }
+
+  .main_center {
+    flex-wrap: wrap;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-top: 44px;
+    margin-bottom: 40px;
+  }
+
+  .post_card {
+    flex-wrap: wrap;
+    /* flex: 1 1 100%;
+    width: 100%; */
+    margin-bottom: 34px;
+
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-color: #eeeeee;
+  }
+
+  .post_card_image {
+    width: 100%;
+  }
+
+  .content_post {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .post_card_tags {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .post_card_header {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .post_card_info {
+    margin-bottom: 20px;
+  }
+
+  .post_card_text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .posts_feed {
+    margin-bottom: 44px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .search_container {
+    width: 100%;
+  }
+
+  .search {
+    margin-bottom: 44px;
+  }
+
+  .newsletter {
+    margin-top: 44px;
+    margin-bottom: 0;
+  }
+
+  .tags {
+    margin-top: 44px;
+  }
+
+  .topics_list {
+    margin-bottom: 0;
+  }
+
+  .products_section {
+    margin-bottom: 43px;
+  }
+
+  .product_container {
+    margin-bottom: 26.6px;
+  }
+
+  .product_container:nth-child(even) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .container_copyright {
+    margin-top: 50px;
+  }
+
+  .popup {
+    padding: 56px 15px 0 15px;
+  }
+
+  .popup_container {
+    width: 330px;
+    padding: 0 23px 30px 23px;
+  }
+
+  .popup_title {
+    padding-top: 30px;
+  }
+
+  .signup_textarea {
+    min-width: 0;
+  }
+
+  .signup_send {
+    width: 100%;
+  }
+}
+
+/* @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+  .trends_post_container {
+    flex: 1 1 15%;
+    margin-bottom: 0;
+    margin-right: 4px;
+  }
+
+  .trends_post_container:last-child {
+    margin-right: 0;
+  }
+} */
+
+/* @media (max-width: 640px) and (orientation: landscape) {
+  .trends_post_container {
+    flex: 1 1 40%;
+    margin-bottom: 2px;
+    margin-right: 0;
+  }
+
+  .trends_post_container:nth-child(odd) {
+    margin-right: 0;
+  }
+
+  .trends_post_container:nth-last-child(1), .trends_post_container:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+} */
+
