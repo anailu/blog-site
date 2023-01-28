@@ -1513,7 +1513,7 @@ picture {
   }
 
   .trends_post_container:nth-child(odd) {
-    margin-right: 0;
+    margin-right: 2px;
   }
 
   .trends_post_container:nth-last-child(1), .trends_post_container:nth-last-child(2) {
