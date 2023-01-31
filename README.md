@@ -10,7 +10,7 @@
 
 ![landscape](https://user-images.githubusercontent.com/110459187/215478337-376558af-1a66-4796-afa1-f8a55d07e421.gif)
 
-- Также для сверстано всплывающее окно для фидбэка (сейчас скрыто, с классом .hidden):
+- Также сверстано всплывающее окно для фидбэка (сейчас скрыто, с классом .hidden):
 
 ![pop-up](https://user-images.githubusercontent.com/110459187/215481859-3506328d-db8a-42de-ac90-8463b36705ad.gif)
 
